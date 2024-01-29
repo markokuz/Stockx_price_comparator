@@ -19,7 +19,7 @@ def search(PID):
     element.send_keys(Keys.ENTER)
     sb.sleep(1)
     sb.click('//*[@id="browse-grid"]/div/div')
-    
+    sb.assert_element_present('//*[@id="main-content"]/div/section[7]/div[2]/div/div')
     price = sb.get_text('//*[@id="main-content"]/div/section[7]/div[2]/div/div')
     price = price.replace("CA$", "")
     print(price)
