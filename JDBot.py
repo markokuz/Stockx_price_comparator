@@ -58,6 +58,8 @@ class JDBOT(BaseCase):
         PID = PID.replace("Product Code: ", "")
         return PID, price
 
+
+
     #returns the average sale price of a shoe
     def search(self, PID):
         self.switch_to_default_driver()
@@ -76,35 +78,4 @@ class JDBOT(BaseCase):
         price = self.get_text('#main-content > div > section:nth-child(9) > div.css-79elbk > div > div > div:nth-child(6) > dl > dd')
         price = price.replace("CA$", "")
         return price
-    
-    
 
-        #getting the first products
-        #products go from 1 - 24
-        #for shoes in range(1,24):
-        #self.driver.click('//*[@id="algolia-hits"]/div/div[1]/div')
-        #product_code = self.get_info()
-        #self.search(product_code)
-
-
-#sb.sleep(random.uniform(1,4))
-
-#Opening the drivers
-
-#driver1 = self.driver.get("https://stockx.com/")
-#driver2 = self.get_new_driver()
-#self.driver.get("https://jdsports.ca/collections/mens-shoes-sale?refinementList%5Bvendor%5D%5B0%5D=Nike")
-#self.sleep(2)
-#self.switch_to_default_driver()
-#self.type("#site-search", "hello")
-#element = self.find_element("#site-search")  # Replace '#elementID' with the ID of your target element
-#element.send_keys(Keys.ENTER)
-
-#getting the first products
-#products go from 1 - 24
-#for shoes in range(1,24):
-#self.driver.click('//*[@id="algolia-hits"]/div/div[1]/div')
-#product_code = get_info()
-#search(product_code)
-
-#self.sleep(random.uniform(1,3))
