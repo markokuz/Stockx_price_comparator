@@ -40,6 +40,8 @@ class JDBOT(BaseCase):
 
         if (profit >= 10):
             print(profit)
+        else:
+            print("not profitable")
 
         
 
@@ -73,6 +75,7 @@ class JDBOT(BaseCase):
         self.sleep(1)
 
         #scrolling to the prices grid
+        self.scroll_to_bottom()
         self.scroll_to("#main-content > div > section:nth-child(9) > div.css-79elbk > div > div")
         #getting the average price
         price = self.get_text('#main-content > div > section:nth-child(9) > div.css-79elbk > div > div > div:nth-child(6) > dl > dd')
